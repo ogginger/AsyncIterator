@@ -17,7 +17,7 @@ define([
 ) {
         return Backbone.Model.extend({
                 "initialize": function() {
-			log("AsyncIterator initialized successfully!");
+			//log("AsyncIterator initialized successfully!");
                 },
 
 		defaults: function() {
