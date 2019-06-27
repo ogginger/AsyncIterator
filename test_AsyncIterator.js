@@ -1,6 +1,7 @@
 //testsuite.js: Testing Logic.
 
 define([
+  "promise",
   "TestSuite",
   "log",
   "AsyncIterator",
@@ -16,6 +17,7 @@ define([
 	"tests/AsyncIterator_Iterate_MustPassAllTrue_FirstPromisePassesSecondPromiseFails_RejectsError",
 	"tests/AsyncIterator_Iterate_DoesntPassValidation_RejectsError"
 ], function(
+  promise,
   TestSuite,
   log,
   AsyncIterator,
@@ -37,14 +39,14 @@ define([
       var xTestSuite = this;
       xTestSuite.set( "MethodUnderTest", "AsyncIterator" );
 
-	///AsyncStepper
+	/*AsyncStepper
         xTestSuite.add( AsyncIterator_AsyncStepper_ArrayWithPromise_ResolvesState ); 
 	xTestSuite.add( AsyncIterator_AsyncStepper_EmptySet_RejectsEndOfSet );
 	xTestSuite.add( AsyncIterator_AsyncStepper_ArrayWithRejectingPromise_ResolvesStateWithError );
 	xTestSuite.add( AsyncIterator_AsyncStepper_ArrayWithRejectingPromiseAndResolvingPromise_ResolvesStateWithResultAndError );
 	xTestSuite.add( AsyncIterator_AsyncStepper_DoesntPassValidation_RejectsWithError );
 	xTestSuite.add( AsyncIterator_AsyncStepper_MustPassTrue_PromiseFails_RejectsWithError );
-	//*/
+	///
 
 	///Iterate
 	xTestSuite.add( AsyncIterator_Iterate_ArrayWithPromises_ResolvesStateWithResults );
